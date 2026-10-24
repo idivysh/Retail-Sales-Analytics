@@ -19,8 +19,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-DATA_DIR = PROJECT_ROOT / "data" / "processed"
+DATA_DIR = Path(__file__).resolve().parent / "data" / "processed"
 
 
 def load_csv(filename: str) -> pd.DataFrame:
